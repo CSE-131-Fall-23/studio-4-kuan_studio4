@@ -32,11 +32,13 @@ public class InterpretDrawingFile {
 		double parameterTwo = in.nextDouble();
 		double parameterThree = in.nextDouble();
 		double parameterFour = in.nextDouble();
-		double parameterFive;
-		double parameterSix;
+		double parameterFive = 0;
+		double parameterSix= 0;
+
 		while (in.hasNextDouble()) {
 			parameterFive = in.nextDouble();
 			parameterSix = in.nextDouble();
+			
 		}
 
 		Color color_random = new Color(redComponent, greenComponent, blueComponent);
@@ -59,17 +61,16 @@ public class InterpretDrawingFile {
 			}
 		}
 
-//		else {
-//			double[] x = {parameterOne, parameterThree, parameterFive};
-//			double[] y = {parameterTwo, parameterFour, parameterSix};
-//			}
-//			if (!isFilled) {
-//				StdDraw.polygon(x, y);
-//			}
-//			else {
-//				StdDraw.filledPolygon(x, y);
-//			}
-//		}
+		else {
+			double[] x = {parameterOne, parameterThree, parameterFive};
+			double[] y = {parameterTwo, parameterFour, parameterSix};
+			if (!isFilled) {
+				StdDraw.polygon(x, y);
+			}
+			else {
+				StdDraw.filledPolygon(x, y);
+			}
+		}
 
 		//		triangle 109 182 255 false 0.2 0.8 0.5 0.6 0.2 0.3
 
